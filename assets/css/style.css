@@ -335,7 +335,8 @@ span{
 }
 .services-box{
     background-color: var(--main-color);
-    height: 300px;
+    min-height: 260px;
+    padding-bottom: 7rem;
     border-radius: 3rem;
     border: 5px solid transparent;
     cursor: pointer;
@@ -462,6 +463,77 @@ span{
 }
 .contact form .btn{
     margin-top: 2rem;
+}
+
+.success-message, .error-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.9);
+    display: -webkit-box;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+    -webkit-transition: opacity 0.36s ease-in-out;
+    transition: opacity 0.36s ease-in-out;
+}
+.success-message .card, .error-message .card{
+    position: relative;
+    z-index: 999999;
+    margin-top: 20% !important;
+    margin: auto;
+    max-width: 50%;
+    padding:30px 50px;
+    border-radius:20px;
+    text-align: center;
+    background-color:#fff;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.30);
+}
+.success-message h3, .error-message h3{
+    font-family: 'Cardo', serif;
+    font-size: 40px;
+    font-weight: 700;
+}
+.success-message h6, .error-message h6{
+    font-size: 20px;
+    font-weight: 600;
+    padding-top:20px;
+    background: #fff;
+    text-align:center;
+    border-radius:10px 10px 0 0
+}
+.success-message.active,
+.error-message.active{
+    opacity: 1;
+    visibility: visible;
+}
+.success-message .close-button,
+.error-message .close-button {
+    position: absolute;
+    line-height: 36px;
+    height: 36px;
+    width: 36px;
+    top: -18px;
+    right: -18px;
+    padding: 0;
+    border: 0;
+    background-color: #55850c;
+    box-shadow: 0 0 5px #1e1e1e;
+    border-radius: 50%;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    transition: all 0.36s ease-in-out;
+}
+.success-message .close-button:active,
+.error-message .close-button:active {
+    transform: scale(0.6);
 }
 
 .footer{

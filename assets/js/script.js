@@ -23,3 +23,7 @@ menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
 }
+
+$(".success-message .close-button, .error-message .close-button").on('click', function() {
+    $(".success-message, .error-message").removeClass('active');
+});
