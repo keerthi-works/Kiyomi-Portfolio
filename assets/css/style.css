@@ -605,13 +605,13 @@ span{
     html{
         font-size: 55%;
     }
-    .services-container{
-        padding-bottom: 7rem;
-        grid-template-columns: repeat(1,1fr);
-        margin: 0 5rem;
-    }
 }
 
+@media(min-width:1024px){
+    .projects .wrapper{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
 @media(max-width:991px){
     header{
         padding: 2rem 3%;
@@ -622,15 +622,28 @@ span{
     .services{
         padding-bottom: 7rem;
     }
-    .projects .wrapper{
-        grid-template-columns: repeat(1,1fr);
-    }
     .footer{
         padding: 2rem 3%;
+    }
+    .services-container{
+        padding-bottom: 7rem;
+        grid-template-columns: repeat(1,1fr);
+        margin: 0 5rem;
+    }
+    .services-box{
+        min-height: fit-content;
+        padding-bottom: 2rem;
+    }
+    .services-box .service-info {
+        max-height: fit-content;
+        padding: 2em;
     }
 }
 
 @media(max-width:895px){
+    section {
+        padding: 8rem 3% 2rem;
+    }
     #menu-icon{
         display: block;
     }
@@ -638,8 +651,9 @@ span{
         position: absolute;
         top: 100%;
         right: 0;
-        width: 50%;
+        width: 45%;
         padding: 1rem 3%;
+        text-align: center;
         background: rgba(0, 0, 0, 0.9);
         backdrop-filter: blur(20px);
         border-bottom-left-radius: 2rem;
@@ -656,33 +670,38 @@ span{
         margin: 3rem 0;
         color: white;
     }
+    .heading {
+        font-size: 6rem;
+    }
     .home{
         flex-direction: column;
-        margin: 5rem 4rem;
+        margin: 5rem 2rem;
+        gap: 4rem;
     }
     .home-content h3{
         font-size: 2.6rem;
     }
     .home-content h1{
-        font-size: 8rem;
+        font-size: 6rem;
         margin-top: 3rem;
     }
     .home-content p{
-        width: 600px;
+        max-width: none;
         margin: 0 auto;
     }
     .home-img img{
-        width: 56vw;
+        width: 60vw;
         margin-top: -2rem;
     }
     .about{
         flex-direction: column-reverse;
+        gap: 4rem;
     }
     .about-content{
         margin: 0 2rem 4rem;
     }
     .about img{
-        width: 52vw;
+        width: 60vw;
         margin-top: 1rem;
         margin-bottom: 3rem;
     }
@@ -691,5 +710,20 @@ span{
     }
     .services-container{
         grid-template-columns: repeat(1,1fr);
+        padding-bottom: 1rem;
+        margin: 0 2rem;
+    }
+    .projects .wrapper {
+        grid-template-columns: repeat(1,1fr);
+        margin-bottom: 4rem;
+    }
+    .contact form {
+        margin: 1rem 2rem;
+    }
+}
+
+@media(max-width:767px){
+    .services-box{
+        padding-bottom: 15rem;
     }
 }
