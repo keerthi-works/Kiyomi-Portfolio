@@ -570,6 +570,7 @@ span{
     margin-top: 0;
     padding: 0;
     font-size: 18px;
+    font-weight: 500;
     line-height: 1.6;
     margin-bottom: 0;
     text-align: center;
@@ -607,7 +608,7 @@ span{
     }
 }
 
-@media(min-width:1024px){
+@media(max-width:1024px){
     .projects .wrapper{
         grid-template-columns: repeat(2,1fr);
     }
