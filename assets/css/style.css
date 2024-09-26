@@ -108,7 +108,7 @@ section{
     margin-top: 3rem;
 }
 span{
-    color: var(--main-colormaincolor);
+    color: var(--main-color);
 }
 .logo span{
     color: var(--main-color);
