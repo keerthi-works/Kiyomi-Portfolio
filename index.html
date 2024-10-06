@@ -17,19 +17,15 @@
             <i class="bx bx-menu" id="menu-icon"></i>
 
             <nav class="navbar">
-                <a href="#home" class="active">Home</a>
-
-                <a href="#about">About</a>
-
-                <a href="#services">Services</a>
-
-                <a href="#projects">Projects</a>
-
-                <a href="#contact">Contact</a>
+                <a href="#home" class="active navlink">Home</a>
+                <a href="#about" class="navlink">About</a>
+                <a href="#services" class="navlink">Services</a>
+                <a href="#projects" class="navlink">Projects</a>
+                <a href="#contact" class="navlink">Contact</a>
             </nav>
         </header>
         
-        <section class="home" id="home">
+        <section class="home section" id="home">
             <div class="home-img">
                 <img src="/assets/images/img-1.jpg" alt="">
             </div>
@@ -48,7 +44,7 @@
             </div>
         </section>
 
-        <section class="about" id="about">
+        <section class="about section" id="about">
             <div class="about-content">
                 <h2 class="heading">About <span>Me</span></h2>
                 <h3 class="text-animation"> <span></span> </h3>
@@ -62,7 +58,7 @@
             </div>
         </section>
 
-        <section class="services" id="services">
+        <section class="services section" id="services">
             <h2 class="heading">Services</h2>
             <div class="services-container">
                 <div class="services-box">
@@ -99,7 +95,7 @@
             </div>
         </section>
         
-        <section class="projects" id="projects">
+        <section class="projects section" id="projects">
             <div class="projects-box">
                 <h2 class="heading">Projects</h2>
 
@@ -147,27 +143,27 @@
             </div>
         </section>
 
-        <section class="contact" id="contact">
+        <section class="contact section" id="contact">
             <h2 class="heading">Contact <span>Me</span></h2>
 
-            <form action="#">
+            <form id="contact-form" action="/" target="_blank " method="post">
                 <div class="input-box">
-                    <input type="text" placeholder="Full Name">
-                    <input type="email" placeholder="Email Address">
+                    <input type="text" name="name" id="name" placeholder="Full Name" required>
+                    <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your E-mail..." required>
                 </div>
 
                 <div class="input-box">
-                    <input type="tel" placeholder="Mobile Number">
-                    <input type="text" placeholder="Subject">
+                    <input type="tel" name="number" id="number" pattern="[0-9]{10}" maxlength="10" minlength="10" placeholder="Mobile Number" required>
+                    <input type="text" name="message-sub" id="message-sub" placeholder="Subject">
                 </div>
 
-                <textarea name="form-message" id="form-message" cols="30" rows="10" placeholder="Your Message.."></textarea>
-                <input type="submit" value="Send Message" class="btn">
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message.."></textarea>
+                <button type="submit" id="form-submit" onclick="sendContact()" class="btn">Send Message</button>
             </form>
         </section>
 
         <!-- ***** Popup Messages Start ***** -->
-        <!-- <div class="success-message">
+        <div class="success-message">
             <div class="card">
                 <button type="button" class="close-button">&times;</button>
                 <h3>Thanks For Contacting!</h3>
@@ -181,7 +177,7 @@
                 <h3>Error!</h3>
                 <h6>Your Message is not sent!</h6>
             </div>
-        </div> -->
+        </div>
         <!-- ***** Popup Messages End ***** -->
 
         <footer class="footer">
@@ -202,7 +198,9 @@
             <p class="copyright">Made with &hearts; by <a rel="nofollow" href="https://www.linkedin.com/in/im-nithesh/" target="_blank">Nithesh Mohan</a><br>All&nbsp;rights&nbsp;reserved</p>
         </footer>
 
+        <script src="/assets/js/jquery.slim.min.js"></script>
         <script src="/assets/js/script.js"></script>
+        <script src="/assets/js/validate.js"></script>
 
     </body>
 </html>
