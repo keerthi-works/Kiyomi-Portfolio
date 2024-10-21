@@ -726,4 +726,13 @@ span{
     .services-box{
         padding-bottom: 15rem;
     }
+    .success-message .card, .error-message .card{
+        max-width: 90%;
+    }
+    .success-message h3, .error-message h3{
+        font-size: 30px;
+    }
+    .success-message h6, .error-message h6{
+        font-size: 16px;
+    }
 }
