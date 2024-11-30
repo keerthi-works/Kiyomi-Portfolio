@@ -492,19 +492,17 @@ span{
     padding:30px 50px;
     border-radius:20px;
     text-align: center;
-    background-color:#fff;
+    background-color: var(--second-bg-color);
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.30);
 }
 .success-message h3, .error-message h3{
-    font-family: 'Cardo', serif;
     font-size: 40px;
-    font-weight: 700;
+    font-weight: 600;
 }
 .success-message h6, .error-message h6{
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
     padding-top:20px;
-    background: #fff;
     text-align:center;
     border-radius:10px 10px 0 0
 }
@@ -519,16 +517,17 @@ span{
     line-height: 36px;
     height: 36px;
     width: 36px;
-    top: -18px;
-    right: -18px;
+    top: -15px;
+    right: -15px;
     padding: 0;
     border: 0;
-    background-color: #55850c;
+    background-color: var(--main-color);
     box-shadow: 0 0 5px #1e1e1e;
     border-radius: 50%;
     font-size: 18px;
     text-align: center;
     color: #fff;
+    cursor: pointer;
     transition: all 0.36s ease-in-out;
 }
 .success-message .close-button:active,
@@ -726,5 +725,14 @@ span{
 @media(max-width:767px){
     .services-box{
         padding-bottom: 15rem;
+    }
+    .success-message .card, .error-message .card{
+        max-width: 90%;
+    }
+    .success-message h3, .error-message h3{
+        font-size: 30px;
+    }
+    .success-message h6, .error-message h6{
+        font-size: 16px;
     }
 }
